@@ -1,0 +1,71 @@
+<!--Weader de contatos-->
+<div class="title_pessoa">
+    <h1>Pessoas</h1>
+</div>
+<mat-card>
+    <form [formControl]="createForm">
+        <div class="formExampleId">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Id</mat-label>
+                <input matInput FormControlId="Id">    
+                </mat-form-field>
+            </div>
+            
+    <div class class="button_pesquisa">
+    <button mat-raised-button  color="warn" (click)= "find">Pesquisar</button>
+    </div>
+</form>
+</mat-card>    
+<div class="button_new_pessoa">
+    <button mat-raised-button color="primary"
+     class="button-add-position" routerLink="/pessoa-cadastro">Novo Contato</button>
+     </div>    
+    
+<!--Lista de contatos-->
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Email</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Telefone</th>
+                <th>Menu</th>
+            </tr>
+        </thead>
+            <ng-template let-pessoa pTemplate="item">
+                <div class="pessoa-item">
+                    <div> 
+                        <td data-label="Email">
+                        {{pessoa.email}}
+                    </td>    
+                    </div>
+                    <div>
+                    <th data-label="Nome">{{pessoa.nome}}
+                    </th>
+                    </div>
+                    <div>
+                        <td data-label="Telefone">
+                        {{pessoa.telefone}}
+                    </td>
+                    </div>
+                    <th data-label="Nome">{{pessoa.nome}}
+                    </th>
+                    <td data-label="Menu">
+                        <div class class="button_check_color buttons_positions">
+                           <button mat-raised-button  color="warn" (click)="deletePessoa(pessoa)">Excluir</button>
+                           <button mat-raised-button  color="accent" routerLink="/pessoa-cadastro">Editar</button>
+                        </div>
+                    </td> 
+                </div>
+            </ng-template>   
+    </table>   
+    <div class="pagination-position">
+        <pagination-controls 
+        [maxSize] = "maxSize"
+        [directionLinks]="directionLinks"
+        [responsive]="responsive"
+        [previousLabel]="labels.previousLabel"
+        [nextLabel]="labels.nextLabel"
+        (onPageChange)="onPageChange($event)">
+        </pagination-controls>
+    </div>

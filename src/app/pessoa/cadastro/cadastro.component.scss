@@ -1,0 +1,41 @@
+.tittle-new-pessoa{
+    margin-top: 20px;
+    display: center;
+    justify-content: center;
+    h1{
+        
+        font-size: 35px;
+        font-weight: bold;
+        font-family: arial;
+    }
+}
+
+.formExample{
+    
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .mat-card-actions {
+    margin-left: -158px;
+    margin-right: -24px;
+    padding: 30px 160px;
+
+}
+  
+    button{
+        width: 140px;
+        padding-left: 13px;
+        grid-gap: 43px;
+        gap: 20px;
+    }
+
+
+  @media screen and (max-width: 600px){
+    .creteForm {
+      display: block;
+      padding: 10px;
+      gap: 10px;
+    }
+  }

@@ -1,0 +1,35 @@
+<!--Header do formulario de criação/edição de usuarios-->
+<section>
+    <div class="tittle-new-pessoa">
+        <h1>
+            Cadastrando uma Nova Pessoa
+        </h1>
+    </div>
+</section>
+<!--Formulario para edição e criação de novo contato-->
+<section>
+    <mat-card>
+        <form [formControl]="createForm">
+            <div class="formExample">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Email</mat-label>
+                    <input matInput FormControlEmail="email">    
+                    </mat-form-field>
+                </div>
+                <div class="formExample">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Nome</mat-label>
+                <input matInput FormControlNome="nome">    
+            </mat-form-field>
+            </div>
+            <div class="formExample">
+                <mat-form-field class="exampe-full-width">
+                    <mat-label>Telefone</mat-label>
+                <input matInput FormControlTelefone="telefone">    
+                </mat-form-field>
+                </div>
+        <button mat-raised-button color="accent" (click)="createPessoa()">Novo Contato</button>
+        <button   mat-raised-button color="primary" (click)="editandoPessoa()">Editar Contato</button>
+</form>
+</mat-card>
+</section>
