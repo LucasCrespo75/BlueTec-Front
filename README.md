@@ -1,5 +1,7 @@
 # BluTec
 
+Utilizando das lignuagens JavaScript e TypeScript, juntamente às linguagens, a linguagens de marcação o HTML5, e a folha de estilo foi o SCSS, e o framework Angular13.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
 ## Development server
